@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@500;600;700&display=swap');
 
 /*======================== VARIABLE CSS ========================*/
 :root{
     --header-height: 3rem;
 
     --hue-color: 191;
-    --first-color: hsl(var(--hue-color),100%,53%);
+    --first-color: hsl(var(--hue-color),96%,49%);
     --first-color-second: hsl(var(--hue-color),64%,22%);
     --first-color-alt: hsl(var(--hue-color),64%,15%);
-    --title-color: hsl(var(--hue-color),64%,18%);
+    --title-color: black;
     --text-color: hsl(var(--hue-color),24%,35%);
     --text-color-light: hsl(var(--hue-color),8%,60%);
     --input-color: hsl(var(--hue-color),24%,97%);
@@ -29,6 +29,7 @@
 
     --font-medium: 500;
     --font-semi-bold: 600;
+    --font-bold: 700;
 
     --mb-0-25: .25rem; 
     --mb-0-5: .5rem;
@@ -74,6 +75,7 @@ body{
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
     background-color: var(--white-color);
     color: var(--text-color);
 }
@@ -119,7 +121,8 @@ input{
 }
 
 .section__title{
-    font-size: var(--h2-font-size);
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
     color: var(--title-color);
     text-align: center;
     text-transform: capitalize;
@@ -264,7 +267,7 @@ b{
 
 .home__data-title{
     font-size: var(--biggest-font-size);
-    font-weight: var(--font-medium);
+    font-weight: var(--font-);
     margin-bottom: var(--mb-2-5);
 }
 
@@ -277,6 +280,10 @@ b{
 .home__social-link{
     font-size: 1.2rem;
     width: max-content;
+}
+
+.home__social-link:hover{
+  color: var(--first-color);
 }
 
 .home__info{
@@ -295,7 +302,7 @@ b{
 .home__info-title{
     display: block;
     font-size: var(--small-font-size);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--font-bold);
     margin-bottom: var(--mb-0-75);
 }
 
@@ -387,7 +394,7 @@ b{
 }
 
 .about__description b{
-  font-size: var(--h1-font-size);
+  font-size: var(--h2-font-size);
   color: var(--first-color-alt);
 }
 
@@ -591,6 +598,16 @@ b{
     font-size: var(--small-font-size);
   }
 }
+
+/*======================== CONTACT ========================*/
+.contact__data{
+  text-align: center;
+}
+
+.contact__container{
+  row-gap: 2.5rem;
+}
+
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
 @media screen and (max-width: 340px) {
@@ -688,7 +705,8 @@ b{
       margin-right: auto;
     }
     .services__container,
-    .place__container {
+    .place__container,
+    .card__container {
       padding-top: 2rem;
     }
   }
@@ -733,7 +751,7 @@ b{
     }
   }
   
-  /* For tall screens on mobiles y desktop*/
+  /* For tall screens on mobiles and desktop*/
   @media screen and (min-height: 721px) {
     body {
       margin: 0;
